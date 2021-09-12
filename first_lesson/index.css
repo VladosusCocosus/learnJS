@@ -1,0 +1,13 @@
+.counter-body {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(100, 100, 100, 0.3);
+    border-radius: 10px;
+    padding: 12px;
+    align-items: center;
+    text-align: center
+}
+
+.counter {
+    color: white;
+}

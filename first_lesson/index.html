@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>First Lesson</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <!--Два варианта интеграции скрипта-->
 <!--Файл-->
@@ -13,9 +14,11 @@
 <!--    alert("hello world")-->
 <!--</script>-->
 <body>
-    <div style="width: 100px; height: 100px; background-color: rgba(100, 100, 100, 0.3); border-radius: 10px; padding: 10px; align-items: center; text-align: center" onClick="alertOnClick()" id="btn">
-        <span id="counter" style="color: white">1</span>
+    <div class="counter-body" onClick="alertOnClick()" id="btn">
+        <span id="counter" class="counter"></span>
     </div>
     <div id="inner-body"></div>
+    <button class="btn primary" onClick="onPlus()">Plus</button>
+    <button class="btn" onClick="onCancel()">Cancel</button>
 </body>
 </html>
