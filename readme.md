@@ -16,5 +16,5 @@
 > Проект установится в папку, в которой вы находитесь!!!
 
 
-    git clone https://github.com/VladosusCocosus/learnJS.git
+```git clone https://github.com/VladosusCocosus/learnJS.git```
 
