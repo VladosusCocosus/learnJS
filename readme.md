@@ -1,4 +1,4 @@
-#**Learn Java Script**
+# **Learn Java Script**
 В рамках курса LearnJS мы поэтапно пройдем основы [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript), научимся работать с [DOM](https://www.w3schools.com/js/js_htmldom.asp), [git](https://git-scm.com/docs/), а так же повторим [HTML5](https://devdocs.io/html/) и [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) ([SCSS](https://sass-lang.com))
 ## Как установить проект?
 Для установки проекта вам потребуется [git](https://git-scm.com/docs/)
