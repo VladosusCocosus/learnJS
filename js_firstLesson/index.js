@@ -33,12 +33,11 @@
 //const - неизменяемая переменная
 //let - изменяемая переменная
 // const a = "a"
-// a = "b"
 // let b = "b"
-// b = "a"
+// b = "3"
 
 // Базовый операторы для отладки
-// console.log("Hello World")
+// console.log("b = ", b, "a = ", a )
 
 //Типы данных
 // number, bigint, string, boolean, null, undefined, object, symbol
@@ -55,15 +54,54 @@
 // typeof Symbol("id") ->  "symbol"
 // typeof [array] = typeof {object: "object"} -> object
 
+
+// console.log(typeof [])
+
+const array = [1, 4, 5, 6, 8, 2, 5, 8]
+let summ = 1
+//0...n
+
 //Циклы
-// for (let i = 0; i < 9; i++)
-// while (a !== 1)
+// for (let i = 0; i < array.length; i++) {
+//     summ = summ * array[i]
+// }
+
+// let value = 0
+
+// while (value < 10) {
+//     value += 1
+//     console.log(value)
+// }
+
+// let summ2 = 1;
+//
+// array.map(function (num){
+//     summ2 *= num
+// })
+
 // ARRAY.map() https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array
 // HASHMAP.foreach() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
 
 // Поиск, изменение элемента(DOM element) на странице
 // const el = document.getElementById("counter")
-// el.style.color = "black"
+
+
+// const array = ["1"]
+// console.log(array.length) --> "1"
+
+// const changeMargin = (sum) => {
+//     const el = document.getElementById("counter")
+//     el.style.marginLeft = sum + "px"
+//     return sum
+// }
+//
+// let summ3 = 0
+//
+// while (summ3 < 100){
+//     setTimeout(changeMargin(summ3), 1000)
+//     summ3 ++
+// }
+
 // const innerBody = document.getElementById("inner-body")
 // innerBody.innerHTML = "<div>innerHTML</div>"
 
@@ -80,7 +118,8 @@
 //     //1. Вызов функции по клику
 //     alert("alertOnClick")
 // }
-//2.Именованная функция(Function expression)
+
+// 2.Именованная функция(Function expression)
 // const alertOnClick2 = function () {
 //     const element = document
 // };
@@ -92,15 +131,14 @@
 
 // Стрелочная(доступен в ES2015 (ECMAScript))
 // const alertOnClick3 = () => {
-//    Отличия от обычной и именованной:
-//    1.Не имеет своего контекста выполнения
-//    2.Неявный return
+//    // Отличия от обычной и именованной:
+//    // 1.Не имеет своего контекста выполнения
+//    // 2.Неявный return
 // }
 //Пример неявного return
 // const _return = (a) => a + 1
 // console.log(_return(1))
 
-// Пробуем
 // let counter = 0
 //
 // const innerCounter = () => {
@@ -114,9 +152,44 @@
 //     innerCounter()
 // }
 //
+// const onMinus = () => {
+//     counter--
+//     innerCounter()
+// }
+//
 // const onCancel = () => {
 //     counter = 0
 //     innerCounter()
 // }
+//
+//
+// let firstNumb = null // => false
+// let secondNumb = null
+// let action = null
+//
+// const innerNumb = (numb) => {
+//     if (firstNumb) {
+//         secondNumb = numb
+//     } else {
+//         firstNumb = numb
+//     }
+// }
+//
+// const pickAction = (_action) => {
+//     action = _action
+// }
+//
+// const onSumm = () => {
+//     if (action === "-"){
+//         console.log(firstNumb - secondNumb)
+//     } else {
+//         console.log(firstNumb + secondNumb)
+//     }
+//
+//     firstNumb = null
+//     secondNumb = null
+//     action = null
+// }
+//
 //
 // innerCounter()
