@@ -42,7 +42,7 @@
 //Типы данных
 // number, bigint, string, boolean, null, undefined, object, symbol
 // Object https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object
-//  const obj = {a: "a", b: "b"}
+//  const obj = {a: "value", b: "b"}
 // Array https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array
 //  const arr = [a, b, c]
 //
@@ -54,56 +54,32 @@
 // typeof Symbol("id") ->  "symbol"
 // typeof [array] = typeof {object: "object"} -> object
 
-
-// console.log(typeof [])
-
-const array = [1, 4, 5, 6, 8, 2, 5, 8]
-let summ = 1
-//0...n
-
 //Циклы
-// for (let i = 0; i < array.length; i++) {
-//     summ = summ * array[i]
+// for (let i = 0; i < 9; i++) {
+//      ...
 // }
-
-// let value = 0
-
 // while (value < 10) {
-//     value += 1
-//     console.log(value)
+//      ...
 // }
-
-// let summ2 = 1;
+// ARRAY.map(function () {
+//      ...
+// }) https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array
+// const array = [1, 6, 2, 5, 8]
+// let summ = 0
 //
-// array.map(function (num){
-//     summ2 *= num
+// array.map(function (numb) {
+//     summ = summ + numb
 // })
-
-// ARRAY.map() https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array
+//
+// console.log(summ)
 // HASHMAP.foreach() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
 
 // Поиск, изменение элемента(DOM element) на странице
 // const el = document.getElementById("counter")
-
-
-// const array = ["1"]
-// console.log(array.length) --> "1"
-
-// const changeMargin = (sum) => {
-//     const el = document.getElementById("counter")
-//     el.style.marginLeft = sum + "px"
-//     return sum
-// }
-//
-// let summ3 = 0
-//
-// while (summ3 < 100){
-//     setTimeout(changeMargin(summ3), 1000)
-//     summ3 ++
-// }
-
+// el.style.color = "orange"
 // const innerBody = document.getElementById("inner-body")
 // innerBody.innerHTML = "<div>innerHTML</div>"
+// innerBody.innerText = "Text"
 
 // Функция
 
@@ -113,10 +89,12 @@ let summ = 1
 // (функций высшего порядка);
 
 //Как ее объявить?
+
 //1.Обыкновенная функция(Function declaration)
-// function alertOnClick1(){
+// function alertOnClick1(arg){
 //     //1. Вызов функции по клику
 //     alert("alertOnClick")
+//     return "fegeg"
 // }
 
 // 2.Именованная функция(Function expression)
@@ -130,15 +108,16 @@ let summ = 1
 // - условное объявление с if возможно только для Function Expression
 
 // Стрелочная(доступен в ES2015 (ECMAScript))
-// const alertOnClick3 = () => {
+// const alertOnClick3 = (arg) => {
 //    // Отличия от обычной и именованной:
 //    // 1.Не имеет своего контекста выполнения
 //    // 2.Неявный return
 // }
 //Пример неявного return
 // const _return = (a) => a + 1
-// console.log(_return(1))
+// console.log(_return(5))
 
+//Погнали делать
 // let counter = 0
 //
 // const innerCounter = () => {
@@ -162,34 +141,39 @@ let summ = 1
 //     innerCounter()
 // }
 //
+// innerCounter()
+
+//Погнали делать v2
 //
-// let firstNumb = null // => false
-// let secondNumb = null
-// let action = null
-//
-// const innerNumb = (numb) => {
-//     if (firstNumb) {
-//         secondNumb = numb
-//     } else {
-//         firstNumb = numb
-//     }
-// }
-//
-// const pickAction = (_action) => {
-//     action = _action
-// }
-//
-// const onSumm = () => {
-//     if (action === "-"){
-//         console.log(firstNumb - secondNumb)
-//     } else {
-//         console.log(firstNumb + secondNumb)
-//     }
-//
-//     firstNumb = null
-//     secondNumb = null
-//     action = null
-// }
+let firstNumb = null // => false
+let secondNumb = null
+let action = null
+
+const innerNumb = (numb) => {
+    if (!firstNumb || !secondNumb) {
+        if (firstNumb) {
+            secondNumb = numb
+        } else {
+            firstNumb = numb
+        }
+    }
+}
+
+const pickAction = (_action) => {
+    action = _action
+}
+
+const onSumm = () => {
+    if (action === "-"){
+        console.log(firstNumb - secondNumb)
+    } else {
+        console.log(firstNumb + secondNumb)
+    }
+
+    firstNumb = null
+    secondNumb = null
+    action = null
+}
 //
 //
 // innerCounter()
